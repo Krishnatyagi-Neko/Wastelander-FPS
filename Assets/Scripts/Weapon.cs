@@ -5,6 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private float damageAmount  = 40f;
+    [SerializeField] private ParticleSystem muzzleFlash;
     private StarterAssetsInputs starterAssetsInputs;
 
     void Awake()
@@ -27,10 +28,14 @@ public class Weapon : MonoBehaviour
 
     void HandleShoot()
     {
+
+
         Ray ray = new Ray(
             Camera.main.transform.position,
             Camera.main.transform.forward
         );
+
+        muzzleFlash.Play();
 
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
