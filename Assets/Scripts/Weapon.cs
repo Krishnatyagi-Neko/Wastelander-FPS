@@ -6,6 +6,10 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private float damageAmount  = 40f;
     [SerializeField] private ParticleSystem muzzleFlash;
+    [SerializeField] Animator animator;
+
+    const string SHOOT_STRING= "Shoot";
+
     private StarterAssetsInputs starterAssetsInputs;
 
     void Awake()
@@ -36,6 +40,8 @@ public class Weapon : MonoBehaviour
         );
 
         muzzleFlash.Play();
+        animator.Play(SHOOT_STRING, 0, 0f);
+        starterAssetsInputs.shoot = false;
 
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
