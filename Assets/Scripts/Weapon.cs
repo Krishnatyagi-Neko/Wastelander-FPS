@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private float damageAmount  = 40f;
     private StarterAssetsInputs starterAssetsInputs;
 
     void Awake()
@@ -18,13 +19,13 @@ public class Weapon : MonoBehaviour
 
         if (starterAssetsInputs.shoot)
         {
-            Shoot();
+            HandleShoot();
 
             starterAssetsInputs.shoot = false;
         }
     }
 
-    void Shoot()
+    void HandleShoot()
     {
         Ray ray = new Ray(
             Camera.main.transform.position,
@@ -33,7 +34,12 @@ public class Weapon : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
         {
-            Debug.Log("Hit: " + hit.collider.name);
+            EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+            enemyHealth?.TakeDamage(damageAmount);
+            // if (enemyHealth != null)
+            // {
+            //     enemyHealth.TakeDamage(damageAmount);
+            // }
         }
         else
         {
