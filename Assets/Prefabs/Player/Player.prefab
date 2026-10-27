@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 3621264719678753141}
   - component: {fileID: 1862466311270999368}
   - component: {fileID: 3567313509052912408}
-  - component: {fileID: 3671419581322570075}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -347,22 +346,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &3671419581322570075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6675174061495982360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac4bd1a4418ec145b51d1ff4f1f6919, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Weapon
-  hitVFXPrefab: {fileID: 7180045655504231569, guid: 06f528a189e70a74cb1e49eecf35bc2c, type: 3}
-  damageAmount: 40
-  muzzleFlash: {fileID: 4679627584244747641}
-  animator: {fileID: 4650327805502780951}
 --- !u!1 &8414371417012046830
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9039728034560474295}
+  - component: {fileID: 192071257967127671}
   m_Layer: 3
   m_Name: Pistol
   m_TagString: Untagged
@@ -396,6 +380,23 @@ Transform:
   - {fileID: 7687182036954662101}
   m_Father: {fileID: 4443967620393055715}
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+--- !u!114 &192071257967127671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414371417012046830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac4bd1a4418ec145b51d1ff4f1f6919, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  weaponSO: {fileID: 11400000, guid: df6f69044bed8534ea63e20154fe98f3, type: 2}
+  hitVFXPrefab: {fileID: 7180045655504231569, guid: 06f528a189e70a74cb1e49eecf35bc2c, type: 3}
+  damageAmount: 40
+  muzzleFlash: {fileID: 4679627584244747641}
+  animator: {fileID: 4650327805502780951}
 --- !u!1 &8436139942430397195
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pistol_02_Blue_Team
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d91fae2703d43046a1c37804ae23dad, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -595,6 +600,10 @@ PrefabInstance:
     - target: {fileID: 2205444504416235717, guid: 4679c8255154f1f409eb81ad5d91e4ba, type: 3}
       propertyPath: m_Name
       value: Muzzle Flash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2205444504416235717, guid: 4679c8255154f1f409eb81ad5d91e4ba, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5046165035955032896, guid: 4679c8255154f1f409eb81ad5d91e4ba, type: 3}
       propertyPath: startDelay.scalar

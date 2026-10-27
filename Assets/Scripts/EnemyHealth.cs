@@ -1,11 +1,13 @@
+
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float maxHealth = 100f;
+    [SerializeField] private float maxHealth = 100f;
+
     private float currentHealth;
 
-    void Start()
+    private void Awake()
     {
         currentHealth = maxHealth;
     }
@@ -13,6 +15,12 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
+
+        Debug.Log(
+            gameObject.name + " took " + amount +
+            " damage. Health remaining: " + currentHealth
+        );
+
         if (currentHealth <= 0f)
         {
             Die();
@@ -21,8 +29,8 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Enemy died.");
+        Debug.Log(gameObject.name + " died!");
+
         Destroy(gameObject);
     }
-
 }
