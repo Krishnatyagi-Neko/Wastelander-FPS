@@ -1,102 +1,65 @@
 
-using StarterAssets;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [Header("Weapon Settings")]
-    [SerializeField] private WeaponSO weaponSO;
-    [SerializeField] private GameObject hitVFXPrefab;
-    [SerializeField] private ParticleSystem muzzleFlash;
-    [SerializeField] private Animator animator;
+    [SerializeField] ParticleSystem muzzleFlash;
 
-    [Header("Shooting")]
-    [SerializeField] private float range = 100f;
-
-    private StarterAssetsInputs starterAssetsInputs;
-
-    private const string SHOOT_STRING = "Shoot";
-
-    private void Awake()
+    public void Shoot(WeaponSO weaponSO)
     {
-        starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
-    }
+        Debug.Log("Weapon.Shoot() called!");
 
-    private void Update()
-    {
-        if (starterAssetsInputs == null)
-            return;
-
-        if (starterAssetsInputs.shoot)
+        if (muzzleFlash != null)
         {
-            // Reset input so one press produces one shot.
-            starterAssetsInputs.shoot = false;
-
-            HandleShoot();
+            muzzleFlash.Play();
+            Debug.Log("Muzzle flash played!");
         }
-    }
-
-    private void HandleShoot()
-    {
-        // Check required references.
-        if (weaponSO == null)
+        else
         {
-            Debug.LogError("WeaponSO is not assigned!", this);
-            return;
+            Debug.LogWarning("Muzzle flash is not assigned!");
         }
 
         if (Camera.main == null)
         {
-            Debug.LogError("No camera tagged MainCamera found!");
+            Debug.LogError("Main Camera not found!");
             return;
         }
 
-        // Play weapon effects.
-        if (muzzleFlash != null)
-            muzzleFlash.Play();
+        RaycastHit hit;
 
-        if (animator != null)
-            animator.Play(SHOOT_STRING, 0, 0f);
-
-        // Shoot from the centre of the camera.
-        Ray ray = new Ray(
+        if (Physics.Raycast(
             Camera.main.transform.position,
-            Camera.main.transform.forward
-        );
-
-        if (Physics.Raycast(ray, out RaycastHit hit, range))
+            Camera.main.transform.forward,
+            out hit,
+            Mathf.Infinity))
         {
-            Debug.Log("Shot hit: " + hit.collider.name);
+            Debug.Log("Raycast hit: " + hit.collider.name);
 
-            // Spawn hit effect at the impact point.
-            if (hitVFXPrefab != null)
+            if (weaponSO.HitVFXPrefab != null)
             {
                 Instantiate(
-                    hitVFXPrefab,
+                    weaponSO.HitVFXPrefab,
                     hit.point,
-                    Quaternion.LookRotation(hit.normal)
+                    Quaternion.identity
                 );
             }
 
-            // Search the hit object AND its parent objects.
             EnemyHealth enemyHealth =
-                hit.collider.GetComponentInParent<EnemyHealth>();
+                hit.collider.GetComponent<EnemyHealth>();
 
             if (enemyHealth != null)
             {
-                Debug.Log("Enemy hit! Damage: " + weaponSO.damage);
-
                 enemyHealth.TakeDamage(weaponSO.damage);
+                Debug.Log("Enemy damaged!");
             }
             else
             {
-                Debug.Log("Hit object has no EnemyHealth component: "
-                    + hit.collider.name);
+                Debug.Log("Hit object has no EnemyHealth component.");
             }
         }
         else
         {
-            Debug.Log("Shot fired, but nothing was hit.");
+            Debug.Log("Raycast did not hit anything!");
         }
     }
 }
