@@ -30,8 +30,14 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log(gameObject.name + " died!");
+        SelfDestruct();
+    }
+
+    public void SelfDestruct()
+    {
         Instantiate(robotExplosionVFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        
     }
+
 }
