@@ -129,6 +129,12 @@ namespace StarterAssets
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
 		}
 
+		public void ChangeRotationSpeed(float amount)
+		{
+			RotationSpeed = amount;
+		}
+
+
 		private void CameraRotation()
 		{
 			// if there is an input
