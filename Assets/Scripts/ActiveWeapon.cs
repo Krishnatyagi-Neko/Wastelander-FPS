@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using StarterAssets;
 
@@ -16,22 +15,11 @@ public class ActiveWeapon : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("ActiveWeapon Awake called", this);
-
         starterAssetsInputs =
             GetComponentInParent<StarterAssetsInputs>();
 
         animator = GetComponentInChildren<Animator>();
         currentWeapon = GetComponentInChildren<Weapon>();
-
-        Debug.Log("StarterAssetsInputs found: " +
-            (starterAssetsInputs != null), this);
-
-        Debug.Log("Weapon found: " +
-            (currentWeapon != null), this);
-
-        Debug.Log("WeaponSO assigned: " +
-            (weaponSO != null), this);
     }
 
     void Update()
@@ -43,7 +31,6 @@ public class ActiveWeapon : MonoBehaviour
 
         if (starterAssetsInputs.shoot)
         {
-            Debug.Log("Shoot input detected!", this);
             HandleShoot();
         }
     }
@@ -64,15 +51,12 @@ public class ActiveWeapon : MonoBehaviour
     {
         if (weaponSO == null || currentWeapon == null)
         {
-            Debug.LogError("Weapon or WeaponSO is missing!", this);
             starterAssetsInputs.ShootInput(false);
             return;
         }
 
         if (timeSinceLastShot >= weaponSO.firerate)
         {
-            Debug.Log("Calling Weapon.Shoot()", this);
-
             currentWeapon.Shoot(weaponSO);
 
             if (animator != null)
