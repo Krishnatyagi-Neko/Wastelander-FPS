@@ -411762,6 +411762,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.086
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.17140004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.257
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9238795
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3826837
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039728034560474295, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039728034560474295, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039728034560474295, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.108
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -411787,7 +411823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3248aa4e53b973c46a5b0c6ea0d29a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ActiveWeapon
-  weaponSO: {fileID: 11400000, guid: df6f69044bed8534ea63e20154fe98f3, type: 2}
+  weaponSO: {fileID: 11400000, guid: fff51c5ebe00405498720e0097742693, type: 2}
 --- !u!43 &1592504353
 Mesh:
   m_ObjectHideFlags: 0
