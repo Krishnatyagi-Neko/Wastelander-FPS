@@ -48,6 +48,11 @@ public class ActiveWeapon : MonoBehaviour
         }
     }
 
+    public void SwitchWeapon(WeaponSO weaponSO)
+    {
+        Debug.Log("Switching weapon to: " + weaponSO.name, this);
+    }
+
     void HandleShoot()
     {
         if (weaponSO == null || currentWeapon == null)
