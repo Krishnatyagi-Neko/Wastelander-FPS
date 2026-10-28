@@ -1,4 +1,5 @@
 
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -6,13 +7,20 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     
 
+    CinemachineImpulseSource impulseSource;
+
+    void Awake()
+    {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
+
     public void Shoot(WeaponSO weaponSO)
     {
-        Debug.Log("Weapon.Shoot() called!");
 
         if (muzzleFlash != null)
         {
             muzzleFlash.Play();
+            impulseSource.GenerateImpulse();
             Debug.Log("Muzzle flash played!");
         }
         else

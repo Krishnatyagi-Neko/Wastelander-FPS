@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca2d35f2581df64c8d8e0cb6fcd5ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  robotExplosionVFX: {fileID: 3202077432902138359, guid: 1df76faf5322d3d409518f07fafc5ea9, type: 3}
   maxHealth: 100
 --- !u!95 &2845997983425034853
 Animator:

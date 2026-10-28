@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] GameObject robotExplosionVFX;
     [SerializeField] private float maxHealth = 100f;
 
     private float currentHealth;
@@ -30,7 +31,7 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         Debug.Log(gameObject.name + " died!");
-
+        Instantiate(robotExplosionVFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
