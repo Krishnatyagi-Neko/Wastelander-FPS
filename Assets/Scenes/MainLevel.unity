@@ -411762,68 +411762,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.086
-      objectReference: {fileID: 0}
-    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.17140004
-      objectReference: {fileID: 0}
-    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.257
-      objectReference: {fileID: 0}
-    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9238795
-      objectReference: {fileID: 0}
-    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.3826837
-      objectReference: {fileID: 0}
-    - target: {fileID: 7747493611629439424, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039728034560474295, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.068
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039728034560474295, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.031
-      objectReference: {fileID: 0}
-    - target: {fileID: 9039728034560474295, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.108
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5922122127492430556, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1589092944}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
---- !u!1 &1589092943 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5922122127492430556, guid: 0eace33ce7e3aac44bb3a7d9895ba221, type: 3}
-  m_PrefabInstance: {fileID: 1589092942}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1589092944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589092943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3248aa4e53b973c46a5b0c6ea0d29a5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ActiveWeapon
-  weaponSO: {fileID: 11400000, guid: fff51c5ebe00405498720e0097742693, type: 2}
 --- !u!43 &1592504353
 Mesh:
   m_ObjectHideFlags: 0
@@ -442287,6 +442230,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674273996}
   m_Mesh: {fileID: -1511676228107950770, guid: 3c4f14ad438897d43a269df8de7f23ab, type: 3}
+--- !u!1001 &1682808390
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7437716
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.47184142
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053643870290968269, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062649559896503802, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: m_Name
+      value: Sniper Rifle Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630181079175430219, guid: a69d24380ec41324e9321d495f86efde, type: 3}
+      propertyPath: weaponSO
+      value: 
+      objectReference: {fileID: 11400000, guid: faf8513dc21f7f74f8a117aeb60b2762, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a69d24380ec41324e9321d495f86efde, type: 3}
 --- !u!1 &1685273668
 GameObject:
   m_ObjectHideFlags: 0
@@ -596971,3 +596975,4 @@ SceneRoots:
   - {fileID: 1015742382}
   - {fileID: 666111965364546709}
   - {fileID: 7209669203915898785}
+  - {fileID: 1682808390}
